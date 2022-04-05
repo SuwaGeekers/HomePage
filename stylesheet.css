@@ -4,11 +4,9 @@
     margin: 0;
     font-family: 'Zen Maru Gothic', sans-serif;
 }
-
 ul {
     list-style: none;
 }
-
 a {
     text-decoration: none;
     color: black;
@@ -21,36 +19,47 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    margin: 20px auto;
-    width: 90%;
+    width: 100%;
     z-index: 999;
+    transition: background-color 0.5s ease;
+    background-color: #00000000;
+}
+
+header.scroll {
+    transition: all 0.5s ease;
+    background-color: #000;
 }
 
 nav {
     display: flex;
     display: -webkit-flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 100px;
 }
 
-nav h1 {
-    font-size: 30px;
+nav a {
     color: #fff;
+}
+
+nav h1 a{
+    font-size: 30px;
 }
 
 nav ul {
     display: flex;
     display: -webkit-flex;
-    margin-left: auto;
 }
-nav ul li {
-    color: #fff;
+nav ul li a{
     margin: 0 13px;
-    padding: 2px 2px;
+    padding: 2px 2px 2px 0;
     font-size: 20px;
+    transition: border-bottom 0.5s ease;
+    border-bottom: solid 2px #00000000;
 }
-nav ul li:hover {
+nav ul li a:hover {
+    transition: border-bottom 0.5s ease;
     border-bottom: solid 2px #fff;
-    padding-bottom: 0;
 }
 
 #top {
@@ -79,6 +88,7 @@ nav ul li:hover {
     font-size: 30px;
     font-weight: bold;
     color: #fff;
+    text-align: center;
 }
 #subtitle {
     font-size: 50px;
@@ -93,13 +103,14 @@ nav ul li:hover {
 /* 各セクション */
 section {
     height: 500px;
-    padding: 20px 60px;
+    padding: 40px 60px;
+    text-align: center;
 }
 section:nth-child(2n) {
     background-color: rgb(235, 235, 235);
 }
 
 .title {
-    font-size: 20px;
-    text-align: center;
+    font-size: 30px;
+    margin: 10px 20px;
 }
