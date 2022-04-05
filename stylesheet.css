@@ -11,6 +11,9 @@ a {
     text-decoration: none;
     color: black;
 }
+strong {
+    color: rgb(0, 189, 110);
+}
 
 /* header部 */
 
@@ -116,8 +119,37 @@ section:nth-child(2n) {
 }
 
 .content {
-    margin: 40px 0;
+    margin: 40px auto;
+    width: 80%;
 }
+
+
+.card {
+    padding: 20px;
+    display: inline-block;
+    width: 40%;
+}
+.card-title {
+    font-size: 25px;
+}
+.card-content {
+    margin-top: 10px;
+}
+
+#lab{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+#activity strong {
+    font-size: 27px;
+}
+
+
 
 /* プロジェクト */
 #project p {
