@@ -118,6 +118,10 @@ section:nth-child(2n) {
     font-size: 30px;
     margin: 10px 20px;
     color: rgb(0, 189, 110);
+    border-bottom: solid 4px rgb(0, 189, 110);
+    display: inline-block;
+    text-align: center;
+    padding: 0 15px;
 }
 
 .content {
