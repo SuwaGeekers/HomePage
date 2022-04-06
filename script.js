@@ -9,4 +9,15 @@ window.onload = function() {
         }
     }
     window.addEventListener('scroll', scroll_event);
+
+    const ElNav = document.getElementById("nav");
+    const ElNavButtom = document.getElementById("nav-button");
+    const nav_open_event = function() {
+        if (ElNav.classList.contains("open")) {
+            ElNav.classList.remove("open");
+        } else {
+            ElNav.classList.add("open");
+        }
+    }
+    ElNavButtom.addEventListener("click", nav_open_event)
 }
