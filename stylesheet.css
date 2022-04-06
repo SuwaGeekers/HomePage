@@ -14,6 +14,9 @@ a {
 strong {
     color: rgb(0, 189, 110);
 }
+p {
+    font-size: 20px;
+}
 
 /* header部 */
 
@@ -68,9 +71,6 @@ nav ul li a:hover {
     border-bottom: solid 2px #fff;
 }
 @media screen and (max-width: 1100px) {
-    nav h1 a{
-        font-size: 60px;
-    }
     header {
         background-color: rgb(0, 153, 89);
     }
@@ -81,7 +81,7 @@ nav ul li a:hover {
     }
     #nav-link {
         position: fixed;
-        top: 107px;
+        top: 64px;
         left: -388px;
         height: 100%;
         padding: 0 40px;
@@ -94,10 +94,7 @@ nav ul li a:hover {
         flex-direction: column;
     }
     nav ul li {
-        padding: 40px 0;
-    }
-    nav ul li a{
-        margin: 0 40px 0 0;
+        padding: 20px 0;
     }
 
     nav.open #nav-link {
@@ -107,16 +104,16 @@ nav ul li a:hover {
 
     #nav-button {
         display: inline-block;
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
         position: absolute;
-        top: 17px;
+        top: 13px;
         left: 30px;
     }
     #nav-button span {
         display: block;
-        height: 10px;
-        margin: 12.5px 0;
+        height: 5px;
+        margin: 6.25px 0;
         background-color: #fff;
     }
     #nav-button span {
@@ -128,7 +125,7 @@ nav ul li a:hover {
         transition: all 0.5s ease;
         transform: rotate(45deg);
         position: relative;
-        top: 22px;
+        top: 12px;
     }
     nav.open #nav-button span:nth-child(2) {
         transition: all 0.2s ease;
@@ -138,16 +135,7 @@ nav ul li a:hover {
         transition: all 0.5s ease;
         transform: rotate(-45deg);
         position: relative;
-        top: -22px;
-    }
-    nav ul li a{
-        margin: 0 13px;
-        padding: 2px 2px 2px 0;
-        font-size: 40px;
-        border-bottom: solid 8px #00000000;
-    }
-    nav ul li a:hover {
-        border-bottom: solid 8px #fff;
+        top: -12px;
     }
 }
 
@@ -194,18 +182,16 @@ nav ul li a:hover {
 }
 @media screen and (max-width: 1100px) {
     #top-gray {
-        height: 1000px;
+        height: 600px;
+        background-color: #000;
+        opacity: 0.4;
     }
     #top-text {
-        height: 1000px;
-        padding: 0 100px;
+        height: 600px;
+        padding: 0 30px;
         flex-direction: column;
     }
-    #title {
-        font-size: 60px;
-    }
     #subtitle {
-        font-size: 80px;
         margin-top: 50px;
         margin-left: 0;
     }
@@ -271,10 +257,17 @@ section:nth-child(2n) {
     .content {
         width: 100%;
     }
+    section {
+        padding: 40px 20px;
+    }
+}
+
+/* 私たちについて */
+strong.sub-text {
+    font-size: 27px;
 }
 
 /* アクティビティ */
-
 #activity strong {
     font-size: 27px;
 }
@@ -300,4 +293,40 @@ footer {
     font-size: 20px;
     padding: 10px 0;
     border-top: solid 1px #d6d6d6;
+}
+
+
+/* テーブル */
+
+table {
+    margin: 10px auto;
+    width: 500px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    font-size: 17px;
+    padding: 20px 0;
+    text-align: center;
+}
+th {
+    width: 30%;
+}
+td {
+    width: 70%;
+}
+
+tr {
+    border-bottom: solid 1px rgb(0, 189, 110);
+}
+tr:last-child {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 980px) {
+    table {
+        margin: 10px 0;
+        width: 100%;
+    }
 }
