@@ -31,7 +31,9 @@ header {
 header.scroll {
     transition: all 0.5s ease;
     background-color: rgb(0, 153, 89);
-    border-bottom: solid 3px #000;
+}
+#nav-button {
+    display: none;
 }
 
 nav {
@@ -64,6 +66,90 @@ nav ul li a{
 nav ul li a:hover {
     transition: border-bottom 0.5s ease;
     border-bottom: solid 2px #fff;
+}
+@media screen and (max-width: 1100px) {
+    header {
+        background-color: rgb(0, 153, 89);
+    }
+
+    #nav-button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+    #nav-button span {
+        display: block;
+        height: 4px;
+        margin: 6px 0;
+        background-color: #fff;
+    }
+
+    nav {
+        justify-content: center;
+        padding: 10px 20px;
+    }
+    #nav-link {
+        position: fixed;
+        top: 64px;
+        left: -212px;
+        height: 100%;
+        padding-left: 30px;
+        background-color: rgb(0, 189, 110);
+        transition: left 0.5s ease;
+    }
+    nav ul {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+    }
+    nav ul li {
+        padding: 20px 0;
+    }
+    nav ul li a{
+        margin: 0 40px 0 0;
+    }
+
+    nav.open #nav-link {
+        left: 0;
+        transition: all 0.5s ease;
+    }
+
+    #nav-button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 17px;
+        left: 30px;
+    }
+    #nav-button span {
+        display: block;
+        height: 4px;
+        margin: 6px 0;
+        background-color: #fff;
+    }
+    #nav-button span {
+        transition: transform 0.5s ease;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    nav.open #nav-button span:nth-child(1) {
+        transition: all 0.5s ease;
+        transform: rotate(45deg);
+        position: relative;
+        top:10px;
+    }
+    nav.open #nav-button span:nth-child(2) {
+        transition: all 0.2s ease;
+        opacity: 0;
+    }
+    nav.open #nav-button span:nth-child(3) {
+        transition: all 0.5s ease;
+        transform: rotate(-45deg);
+        position: relative;
+        top:-10px;
+
+    }
 }
 
 #top {
@@ -102,6 +188,25 @@ nav ul li a:hover {
     margin-left: auto;
 }
 
+@media screen and (max-width: 1450px) {
+    #top-text {
+        padding: 0 200px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #top-text {
+        padding: 0 100px;
+        flex-direction: column;
+    }
+    #title {
+        font-size: 30px;
+    }
+    #subtitle {
+        font-size: 50px;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
 /* Main */
 
 
@@ -151,11 +256,23 @@ section:nth-child(2n) {
     margin: 10px 0;
 }
 
+@media screen and (max-width: 1100px) {
+    .card {
+        width: 60%;
+        margin: 0 auto;
+    }
+    #lab{
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px 0;
+    }
+}
+
+/* アクティビティ */
+
 #activity strong {
     font-size: 27px;
 }
-
-
 
 /* プロジェクト */
 #project p {
