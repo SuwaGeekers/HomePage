@@ -18,6 +18,39 @@ p {
     font-size: 20px;
 }
 
+.button a {
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index:0;
+}
+.button a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: rgb(0, 189, 110);
+    transition: .3s;
+    left:0;
+}
+.button a:hover {
+    color: #FFF;
+}
+.button a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+
 /* header部 */
 
 header {
