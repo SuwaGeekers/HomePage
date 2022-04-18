@@ -1,4 +1,4 @@
-/* 全体に適応 */
+/* 全体に適�? */
 * {
     padding: 0;
     margin: 0;
@@ -158,7 +158,7 @@ nav ul li a:hover {
         transition: all 0.5s ease;
         transform: rotate(45deg);
         position: relative;
-        top: 12px;
+        top: 11px;
     }
     nav.open #nav-button span:nth-child(2) {
         transition: all 0.2s ease;
@@ -168,12 +168,12 @@ nav ul li a:hover {
         transition: all 0.5s ease;
         transform: rotate(-45deg);
         position: relative;
-        top: -12px;
+        top: -11px;
     }
 }
 
 #top {
-    background-image: urL(./top.jpg);
+    background-image: urL(../img/top.jpg);
     background-size: cover;
 }
 #top-gray {
@@ -232,7 +232,7 @@ nav ul li a:hover {
 /* Main */
 
 
-/* 各セクション */
+/* �?セクション */
 section {
     padding: 40px 60px;
     text-align: center;
@@ -295,17 +295,17 @@ section:nth-child(2n) {
     }
 }
 
-/* 私たちについて */
+/* 私たちにつ�?て */
 strong.sub-text {
     font-size: 27px;
 }
 
-/* アクティビティ */
+/* アク�?ィビティ */
 #activity strong {
     font-size: 27px;
 }
 
-/* プロジェクト */
+/* プロジェク�? */
 #project p {
     font-size: 30px;
 }
@@ -315,7 +315,7 @@ strong.sub-text {
     font-size: 30px;
 }
 
-/* お問い合わせ */
+/* お問�?合わ�? */
 #contact p {
     font-size: 30px;
 }
@@ -329,7 +329,7 @@ footer {
 }
 
 
-/* テーブル */
+/* �?ーブル */
 
 table {
     margin: 10px auto;
@@ -362,4 +362,67 @@ tr:last-child {
         margin: 10px 0;
         width: 100%;
     }
+}
+
+
+
+/* ProjectBox */
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 495px) {
+    #project-container {
+        justify-content: center;
+    }
+}
+/* ProjectCard */
+.project-card {
+    height: 180px;
+    width: 180px;
+    border: solid 3px rgb(0, 153, 89);
+    background-image: url(../img/P_noImage.png);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.project-card-badge {
+    font-weight: bold;
+    padding: 3px;
+    background-color: rgb(0, 189, 110);
+    display: inline-block;
+    color: #fff;
+    border-radius: 20%;
+}
+.project-card-overgray {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 153, 89, 0.2);
+    border: solid 3px rgba(0, 153, 89, 0.2);
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+.project-card-overgray:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+.project-card-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
