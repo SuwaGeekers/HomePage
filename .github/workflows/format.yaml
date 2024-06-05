@@ -30,6 +30,7 @@ jobs:
 
       - name: Determine the branch name
         id: get_branch
+        run: echo "branch=$(echo ${GITHUB_HEAD_REF})" >> $BRANCH_NAME
         run: echo "::set-output name=branch::$(echo ${GITHUB_HEAD_REF})"
 
       - name: Commit Format
@@ -41,7 +42,7 @@ jobs:
             git config user.email github-actions@github.com
             git add .
             git commit -m "chore: fix format."
-            git push origin HEAD:${{ steps.get_branch.outputs.branch }}
+            git push origin HEAD:${BRANCH_NAME}
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
