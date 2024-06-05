@@ -37,6 +37,8 @@ jobs:
             git commit -m "chore: fix format."
             git push origin HEAD:${GITHUB_REF};
           fi
-      
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
       - name: Exec Lint
         run: pnpm run lint
