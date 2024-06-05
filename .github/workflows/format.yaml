@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 0
 
       - name: Install Node.js
         uses: actions/setup-node@v4.0.2
@@ -26,6 +28,10 @@ jobs:
       - name: Format
         run: pnpm run format
 
+      - name: Determine the branch name
+        id: get_branch
+        run: echo "::set-output name=branch::$(echo ${GITHUB_HEAD_REF})"
+
       - name: Commit Format
         run: |
           git add -N . # 新規ファイルを含める
@@ -35,7 +41,7 @@ jobs:
             git config user.email github-actions@github.com
             git add .
             git commit -m "chore: fix format."
-            git push
+            git push origin HEAD:${{ steps.get_branch.outputs.branch }}
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
