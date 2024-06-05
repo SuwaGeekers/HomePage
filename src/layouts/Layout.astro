@@ -1,18 +1,29 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
 }
 
-const { title } = Astro.props;
+const { title = 'SuwaGeeks - 公立諏訪東京理科大学 技術部' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='ja'>
   <head>
+    <link rel='stylesheet' href='/css/stylesheet.css' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap'
+      rel='stylesheet'
+    />
+    <script type='text/javascript' src='/js/script.js'></script>
+    <link rel='icon' type='image/png' href='/img/favicon.png' />
+    <meta
+      name='description'
+      content='公立諏訪東京理科大学の技術系サークルSuwaGeeksの公式ホームページです。'
+    />
     <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -20,32 +31,3 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
