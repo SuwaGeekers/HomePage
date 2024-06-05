@@ -31,7 +31,6 @@ jobs:
       - name: Determine the branch name
         id: get_branch
         run: echo "branch=$(echo ${GITHUB_HEAD_REF})" >> $BRANCH_NAME
-        run: echo "::set-output name=branch::$(echo ${GITHUB_HEAD_REF})"
 
       - name: Commit Format
         run: |
