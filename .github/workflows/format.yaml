@@ -35,7 +35,7 @@ jobs:
             git config user.email github-actions@github.com
             git add .
             git commit -m "chore: fix format."
-            git push origin HEAD:${GITHUB_REF};
+            git push
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
