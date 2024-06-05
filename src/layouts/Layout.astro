@@ -1,4 +1,7 @@
 ---
+import Footer from '@components/footer.astro';
+import Header from '@components/header.astro';
+
 interface Props {
   title?: string;
 }
@@ -28,6 +31,8 @@ const { title = 'SuwaGeeks - 公立諏訪東京理科大学 技術部' } = Astro
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
