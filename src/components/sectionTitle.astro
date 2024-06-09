@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <div id='section-title'>
-  <p class='text-title'>{title}</p>
+  <h2 class='text-title'>{title}</h2>
 </div>
 <style>
   #section-title {
@@ -16,7 +16,7 @@ const { title } = Astro.props;
     border-bottom: 4px solid var(--primary);
   }
 
-  #section-title p {
+  #section-title h2 {
     color: var(--primary);
   }
 

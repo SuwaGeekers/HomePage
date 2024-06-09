@@ -1,0 +1,40 @@
+---
+import RenderBrHtml from '@components/util/renderBrHtml.astro';
+
+import { type Activity } from './activitySection.astro';
+
+interface Props {
+  activity: Activity;
+}
+
+const { activity } = Astro.props;
+---
+
+<div id='activity-card'>
+  <h3 class='text-sub-title'>"{activity.title}"</h3>
+  <RenderBrHtml src={activity.description} />
+</div>
+<style>
+  #activity-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+  }
+
+  #activity-card > h3 {
+    text-align: center;
+    color: var(--primary);
+  }
+
+  #activity-card > p {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    #activity-card {
+      row-gap: 2vw;
+      padding: 5vw;
+    }
+  }
+</style>

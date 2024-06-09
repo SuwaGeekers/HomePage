@@ -1,5 +1,6 @@
 ---
 import AboutSection from '@components/aboutSection.astro';
+import ActivitySection from '@components/activitySection.astro';
 import TopSection from '@components/topSection.astro';
 import Layout from '@layouts/Layout.astro';
 ---
@@ -7,79 +8,8 @@ import Layout from '@layouts/Layout.astro';
 <Layout>
   <TopSection />
   <AboutSection />
-  <section id='activity'>
-    <h2 class='title'>活動予定</h2>
+  <ActivitySection />
 
-    <div class='content'>
-      <div id='lab'>
-        <div class='card'>
-          <span class='card-title'>
-            <strong>"モノづくり"</strong>
-          </span>
-          <p class='card-content'>
-            Webページやアプリケーション、ゲーム、<br />
-            マイコン、電子工作などの<br />
-            技術を使った様々なモノづくり
-          </p>
-        </div>
-        <!-- <div class="card">
-                          <span class="card-title">
-                              <strong>"メディアコンテンツづくり"</strong>
-                          </span>
-                          <p class="card-content">
-                              動画制作やXRコンテンツ,音楽など<br>
-                              メディア制作
-                          </p>
-                      </div> -->
-        <div class='card'>
-          <span class='card-title'>
-            <strong>"コンペティション"</strong>
-          </span>
-          <p class='card-content'>
-            CTF(セキュリティ)やKaggle(機械学習)、<br />
-            競技プログラミング(アルゴリズム)などの<br />
-            技術を競うコンペティションに挑戦
-          </p>
-        </div>
-        <div class='card'>
-          <span class='card-title'>
-            <strong>"システム開発"</strong>
-          </span>
-          <p class='card-content'>
-            活動を円滑に進めるためのシステムを開発/運用や,<br />
-            制作物を公開するためのインフラ整備など
-          </p>
-        </div>
-      </div>
-      <br />
-      <div id='lab'>
-        <div class='card'>
-          <span class='card-title'>
-            <strong>"部内ハッカソン・ゲームジャム"</strong>
-          </span>
-          <p class='card-content'>
-            短期間の中で与えられたテーマに沿った<br />
-            ゲームやアプリケーションを作り、発表することで、<br />
-            技術力の向上や、制作経験を培う
-          </p>
-        </div>
-        <div class='card'>
-          <span class='card-title'>
-            <strong>"LT(Lightning Talks)会"</strong>
-          </span>
-          <p class='card-content'>
-            最近の興味のある技術や作ってみたものなどについて5~15分でのプレゼン
-          </p>
-        </div>
-        <div class='card'>
-          <span class='card-title'>
-            <strong>"勉強会"</strong>
-          </span>
-          <p class='card-content'>各活動で培った技術についてサークル内で教え合う勉強会</p>
-        </div>
-      </div>
-    </div>
-  </section>
   <section id='project'>
     <h2 class='title'>プロジェクト</h2>
     <div class='content'>

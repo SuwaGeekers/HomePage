@@ -1,0 +1,39 @@
+---
+import activitiesJSON from '@public/json/activities.json';
+
+import ActivityCard from './activityCard.astro';
+import SectionTitle from './sectionTitle.astro';
+
+export interface Activity {
+  title: string;
+  description: string;
+}
+
+const activities: Activity[] = activitiesJSON;
+---
+
+<section id='activity'>
+  <SectionTitle title='活動予定' />
+
+  <div id='activity-container'>
+    {activities.slice(0, 3).map((elm) => <ActivityCard activity={elm} />)}
+  </div>
+  <div id='activity-container'>
+    {activities.slice(3).map((elm) => <ActivityCard activity={elm} />)}
+  </div>
+</section>
+<style>
+  #activity-container {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    #activity-container {
+      width: auto;
+    }
+  }
+</style>

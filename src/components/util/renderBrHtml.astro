@@ -1,0 +1,27 @@
+---
+interface Props {
+  src: string;
+  class?: string;
+  isAlignCenter?: boolean;
+}
+
+const { src, class: className = 'text-body', isAlignCenter = true } = Astro.props;
+---
+
+<p class:list={[className, { alignCenter: isAlignCenter }]}>
+  {
+    src.split('<br />').map((elm) => {
+      return elm.split("<br class='sp-only' />").map((elm) => (
+        <>
+          {elm}
+          <br />
+        </>
+      ));
+    })
+  }
+</p>
+<style>
+  .alignCenter {
+    text-align: center;
+  }
+</style>
