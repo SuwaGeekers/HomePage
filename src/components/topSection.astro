@@ -1,0 +1,60 @@
+---
+
+---
+
+<section id='top'>
+  <img src='/img/top.jpg' />
+  <div id='bg-overlay'>
+    <div id='text-contaienr'>
+      <p class='text-display-small'>公立諏訪東京理科大学 技術部</p>
+      <p class='text-display-large'>SuwaGeeks</p>
+    </div>
+  </div>
+</section>
+<style>
+  #top {
+    height: 800px;
+    margin: 0;
+  }
+
+  #top img {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    min-width: 1200px;
+    height: 800px;
+    object-fit: cover;
+  }
+
+  #bg-overlay {
+    background-color: rgba(00, 00, 00, 0.4);
+    height: 100%;
+  }
+
+  #text-contaienr {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  #text-contaienr p {
+    color: var(--text-inverse);
+  }
+
+  @media screen and (max-width: 600px) {
+    #top {
+      height: 150vw;
+    }
+
+    #top img {
+      height: 150vw;
+      width: 100%;
+      min-width: 300px;
+    }
+  }
+</style>

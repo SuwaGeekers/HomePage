@@ -1,6 +1,6 @@
 ---
-import Footer from '@components/footer.astro';
-import Header from '@components/header.astro';
+import Footer from '@components/ui/footer.astro';
+import Header from '@components/ui/header.astro';
 
 interface Props {
   title?: string;
@@ -12,7 +12,9 @@ const { title = 'SuwaGeeks - 公立諏訪東京理科大学 技術部' } = Astro
 <!doctype html>
 <html lang='ja'>
   <head>
-    <link rel='stylesheet' href='/css/stylesheet.css' />
+    <!-- <link rel='stylesheet' href='/css/stylesheet.css' /> -->
+    <link rel='stylesheet' href='/css/variables.css' />
+    <link rel='stylesheet' href='/css/global.css' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <link
@@ -29,6 +31,17 @@ const { title = 'SuwaGeeks - 公立諏訪東京理科大学 技術部' } = Astro
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
+    <style>
+      body {
+        min-width: 1200px;
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          min-width: 300px;
+        }
+      }
+    </style>
   </head>
   <body>
     <Header />

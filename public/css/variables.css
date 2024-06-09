@@ -28,10 +28,12 @@
 
 .text-display-large {
   font-size: var(--display-large);
+  font-weight: bold;
 }
 
 .text-display-small {
   font-size: var(--display-small);
+  font-weight: bold;
 }
 
 .text-title {
