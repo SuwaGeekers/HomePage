@@ -1,0 +1,55 @@
+:root {
+  --display-large: 50px;
+  --display-small: 30px;
+  --title: 30px;
+  --sub-title: 30px;
+  --body: 20px;
+  --description: 17px;
+  --detail: 15px;
+
+  --primary: #009959;
+  --text: #000000;
+  --text-inverse: #ffffff;
+  --bg: #ffffff;
+  --bg-sub: #ebebeb;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --display-large: 8.2vw;
+    --display-small: 6.15vw;
+    --title: 5.12vw;
+    --sub-title: 4.61vw;
+    --body: 4.1vw;
+    --description: 3.59vw;
+    --detail: 3.07vw;
+  }
+}
+
+.text-display-large {
+  font-size: var(--display-large);
+}
+
+.text-display-small {
+  font-size: var(--display-small);
+}
+
+.text-title {
+  font-size: var(--title);
+}
+
+.text-sub-title {
+  font-size: var(--sub-title);
+}
+
+.text-body {
+  font-size: var(--body);
+}
+
+.text-description {
+  font-size: var(--description);
+}
+
+.text-detail {
+  font-size: var(--detail);
+}
