@@ -1,75 +1,28 @@
 ---
+import AboutSection from '@components/aboutSection.astro';
 import TopSection from '@components/topSection.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout>
   <TopSection />
-  <div id='main'>
-    <section id='about'>
-      <h2 class='title'>私たちについて</h2>
-      <div class='content'>
-        <p>
-          公立諏訪東京理科大学の"ギーク"が集まり技術を使って<br />
-          楽しんでモノづくりを行いたいと考えて立ち上げた団体です!
-        </p>
-        <br />
-        <p>
-          モノづくりの経験や技術の有無は関係なく,<br />
-          <strong>モノづくりを楽しむ事</strong>をメインに活動しています
-        </p>
-        <br />
-        <p>
-          「アイデアを形にしたい!」・「モノづくりが楽しい!」<br />
-          という人を募集中!
-        </p>
-      </div>
-      <div class='content'>
-        <p>
-          <strong class='sub-text'>"団体概要"</strong>
-        </p>
-        <table>
-          <tbody>
-            <tr>
-              <th>活動場所</th>
-              <td>都度連絡</td>
-            </tr>
-            <tr>
-              <th>会費</th>
-              <td>なし</td>
-            </tr>
-            <tr>
-              <th>設立年</th>
-              <td>2022年</td>
-            </tr>
-            <tr>
-              <th>代表</th>
-              <td>3JO 望月 裕太(2023年度)</td>
-            </tr>
-            <!-- <tr>
-                              <th>所属人数</th>
-                              <td>7 人 (2022/04/18 21:00時点)</td>
-                          </tr> -->
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <section id='activity'>
-      <h2 class='title'>活動予定</h2>
+  <AboutSection />
+  <section id='activity'>
+    <h2 class='title'>活動予定</h2>
 
-      <div class='content'>
-        <div id='lab'>
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"モノづくり"</strong>
-            </span>
-            <p class='card-content'>
-              Webページやアプリケーション、ゲーム、<br />
-              マイコン、電子工作などの<br />
-              技術を使った様々なモノづくり
-            </p>
-          </div>
-          <!-- <div class="card">
+    <div class='content'>
+      <div id='lab'>
+        <div class='card'>
+          <span class='card-title'>
+            <strong>"モノづくり"</strong>
+          </span>
+          <p class='card-content'>
+            Webページやアプリケーション、ゲーム、<br />
+            マイコン、電子工作などの<br />
+            技術を使った様々なモノづくり
+          </p>
+        </div>
+        <!-- <div class="card">
                           <span class="card-title">
                               <strong>"メディアコンテンツづくり"</strong>
                           </span>
@@ -78,164 +31,163 @@ import Layout from '@layouts/Layout.astro';
                               メディア制作
                           </p>
                       </div> -->
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"コンペティション"</strong>
-            </span>
-            <p class='card-content'>
-              CTF(セキュリティ)やKaggle(機械学習)、<br />
-              競技プログラミング(アルゴリズム)などの<br />
-              技術を競うコンペティションに挑戦
-            </p>
-          </div>
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"システム開発"</strong>
-            </span>
-            <p class='card-content'>
-              活動を円滑に進めるためのシステムを開発/運用や,<br />
-              制作物を公開するためのインフラ整備など
-            </p>
-          </div>
-        </div>
-        <br />
-        <div id='lab'>
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"部内ハッカソン・ゲームジャム"</strong>
-            </span>
-            <p class='card-content'>
-              短期間の中で与えられたテーマに沿った<br />
-              ゲームやアプリケーションを作り、発表することで、<br />
-              技術力の向上や、制作経験を培う
-            </p>
-          </div>
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"LT(Lightning Talks)会"</strong>
-            </span>
-            <p class='card-content'>
-              最近の興味のある技術や作ってみたものなどについて5~15分でのプレゼン
-            </p>
-          </div>
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"勉強会"</strong>
-            </span>
-            <p class='card-content'>各活動で培った技術についてサークル内で教え合う勉強会</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id='project'>
-      <h2 class='title'>プロジェクト</h2>
-      <div class='content'>
-        <p>プロジェクト紹介ページ作成中!</p>
-        <div id='project-container'>
-          <div class='project-card'>
-            <div class='project-card-overgray'></div>
-            <span class='project-card-badge'>活動中</span>
-            <h3 class='project-card-title'>
-              <span>大学生活</span><span>支援アプリ開発</span>
-            </h3>
-          </div>
-          <div class='project-card'>
-            <div class='project-card-overgray'></div>
-            <span class='project-card-badge'>活動中</span>
-            <h3 class='project-card-title'>
-              <span>競技</span><span>プログラミング</span>
-            </h3>
-          </div>
-          <div class='project-card'>
-            <div class='project-card-overgray'></div>
-            <span class='project-card-badge'>活動中</span>
-            <h3 class='project-card-title'>
-              <span>開発ロードマップ</span><span>管理アプリ</span>
-            </h3>
-          </div>
-          <div class='project-card'>
-            <div class='project-card-overgray'></div>
-            <span class='project-card-badge'>New</span>
-            <h3 class='project-card-title'>
-              <span>Unity</span><span>勉強会</span>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id='works'>
-      <h2 class='title'>Works</h2>
-      <div class='content'>
-        <div id='project-container'>
-          <div class='project-card'>
-            <div class='project-card-overgray'></div>
-            <h3 class='project-card-title'>
-              <span>WorkLab</span><span>入退室管理システム</span>
-            </h3>
-          </div>
-          <div class='project-card'>
-            <div class='project-card-overgray'></div>
-            <h3 class='project-card-title'>
-              <span>新風祭2022</span><span>展示ゲーム</span>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id='blog'>
-      <h2 class='title'>ブログ</h2>
-      <div class='content'>
-        <p>Comming soon...</p>
-      </div>
-    </section>
-    <section id='contact'>
-      <h2 class='title'>お問い合わせ</h2>
-      <div class='content'>
         <div class='card'>
           <span class='card-title'>
-            <strong>"サークル参加"</strong>
+            <strong>"コンペティション"</strong>
+          </span>
+          <p class='card-content'>
+            CTF(セキュリティ)やKaggle(機械学習)、<br />
+            競技プログラミング(アルゴリズム)などの<br />
+            技術を競うコンペティションに挑戦
+          </p>
+        </div>
+        <div class='card'>
+          <span class='card-title'>
+            <strong>"システム開発"</strong>
+          </span>
+          <p class='card-content'>
+            活動を円滑に進めるためのシステムを開発/運用や,<br />
+            制作物を公開するためのインフラ整備など
+          </p>
+        </div>
+      </div>
+      <br />
+      <div id='lab'>
+        <div class='card'>
+          <span class='card-title'>
+            <strong>"部内ハッカソン・ゲームジャム"</strong>
+          </span>
+          <p class='card-content'>
+            短期間の中で与えられたテーマに沿った<br />
+            ゲームやアプリケーションを作り、発表することで、<br />
+            技術力の向上や、制作経験を培う
+          </p>
+        </div>
+        <div class='card'>
+          <span class='card-title'>
+            <strong>"LT(Lightning Talks)会"</strong>
+          </span>
+          <p class='card-content'>
+            最近の興味のある技術や作ってみたものなどについて5~15分でのプレゼン
+          </p>
+        </div>
+        <div class='card'>
+          <span class='card-title'>
+            <strong>"勉強会"</strong>
+          </span>
+          <p class='card-content'>各活動で培った技術についてサークル内で教え合う勉強会</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id='project'>
+    <h2 class='title'>プロジェクト</h2>
+    <div class='content'>
+      <p>プロジェクト紹介ページ作成中!</p>
+      <div id='project-container'>
+        <div class='project-card'>
+          <div class='project-card-overgray'></div>
+          <span class='project-card-badge'>活動中</span>
+          <h3 class='project-card-title'>
+            <span>大学生活</span><span>支援アプリ開発</span>
+          </h3>
+        </div>
+        <div class='project-card'>
+          <div class='project-card-overgray'></div>
+          <span class='project-card-badge'>活動中</span>
+          <h3 class='project-card-title'>
+            <span>競技</span><span>プログラミング</span>
+          </h3>
+        </div>
+        <div class='project-card'>
+          <div class='project-card-overgray'></div>
+          <span class='project-card-badge'>活動中</span>
+          <h3 class='project-card-title'>
+            <span>開発ロードマップ</span><span>管理アプリ</span>
+          </h3>
+        </div>
+        <div class='project-card'>
+          <div class='project-card-overgray'></div>
+          <span class='project-card-badge'>New</span>
+          <h3 class='project-card-title'>
+            <span>Unity</span><span>勉強会</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id='works'>
+    <h2 class='title'>Works</h2>
+    <div class='content'>
+      <div id='project-container'>
+        <div class='project-card'>
+          <div class='project-card-overgray'></div>
+          <h3 class='project-card-title'>
+            <span>WorkLab</span><span>入退室管理システム</span>
+          </h3>
+        </div>
+        <div class='project-card'>
+          <div class='project-card-overgray'></div>
+          <h3 class='project-card-title'>
+            <span>新風祭2022</span><span>展示ゲーム</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id='blog'>
+    <h2 class='title'>ブログ</h2>
+    <div class='content'>
+      <p>Comming soon...</p>
+    </div>
+  </section>
+  <section id='contact'>
+    <h2 class='title'>お問い合わせ</h2>
+    <div class='content'>
+      <div class='card'>
+        <span class='card-title'>
+          <strong>"サークル参加"</strong>
+        </span>
+        <div class='button' style='margin-top: 20px;'>
+          <a href='https://forms.gle/dbijFMJSFVi3zH1y5' target='_brank' rel='noreferrer noopener'
+            >参加フォームを開く</a
+          >
+        </div>
+      </div>
+      <p style='margin-top: 50px;'>
+        <strong>
+          その他の質問などは<br />
+          TwitterDMへお問い合わせください
+        </strong>
+      </p>
+      <div id='lab'>
+        <div class='card'>
+          <span class='card-title'>
+            <strong>"公式Twitter"</strong>
           </span>
           <div class='button' style='margin-top: 20px;'>
-            <a href='https://forms.gle/dbijFMJSFVi3zH1y5' target='_brank' rel='noreferrer noopener'
-              >参加フォームを開く</a
-            >
-          </div>
-        </div>
-        <p style='margin-top: 50px;'>
-          <strong>
-            その他の質問などは<br />
-            TwitterDMへお問い合わせください
-          </strong>
-        </p>
-        <div id='lab'>
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"公式Twitter"</strong>
-            </span>
-            <div class='button' style='margin-top: 20px;'>
-              <a href='https://twitter.com/SuwaGeeks'>公式Twitter (@SuwaGeeks)</a>
-            </div>
-          </div>
-        </div>
-        <div id='lab'>
-          <div class='card'>
-            <span class='card-title'>
-              <strong>"運営メンバーTwitter"</strong>
-            </span>
-            <div class='button' style='margin-top: 20px;'>
-              <a href='https://twitter.com/mocchi8128'>もっちー (@mocchi8128)</a>
-            </div>
-            <br />
-            <div class='button'>
-              <a href='https://twitter.com/hgox02a'>ゆーだい (@hgox02a)</a>
-            </div>
-            <br />
-            <div class='button'>
-              <a href='https://twitter.com/Sora210_sus'>Sora210 (@Sora210_sus)</a>
-            </div>
+            <a href='https://twitter.com/SuwaGeeks'>公式Twitter (@SuwaGeeks)</a>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+      <div id='lab'>
+        <div class='card'>
+          <span class='card-title'>
+            <strong>"運営メンバーTwitter"</strong>
+          </span>
+          <div class='button' style='margin-top: 20px;'>
+            <a href='https://twitter.com/mocchi8128'>もっちー (@mocchi8128)</a>
+          </div>
+          <br />
+          <div class='button'>
+            <a href='https://twitter.com/hgox02a'>ゆーだい (@hgox02a)</a>
+          </div>
+          <br />
+          <div class='button'>
+            <a href='https://twitter.com/Sora210_sus'>Sora210 (@Sora210_sus)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

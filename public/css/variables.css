@@ -38,6 +38,7 @@
 
 .text-title {
   font-size: var(--title);
+  font-weight: bold;
 }
 
 .text-sub-title {

@@ -1,0 +1,109 @@
+---
+import SectionTitle from './sectionTitle.astro';
+---
+
+<section id='about'>
+  <SectionTitle title='私たちについて' />
+  <div id='our-description'>
+    <p>
+      公立諏訪東京理科大学の"ギーク"が集まり<br class='sp-only' />技術を使って<br
+        class='pc-only'
+      />楽しんでモノづくりを行いたい<br class='sp-only' />と考えて立ち上げた団体です！
+    </p>
+    <p>
+      モノづくりの経験や技術の有無は関係なく、<br />モノづくりを楽しむ事をメインに活動しています
+    </p>
+    <p>
+      「アイデアを形にしたい！」<span class='pc-only'>・</span><br
+        class='sp-only'
+      />「モノづくりが楽しい！」<br />
+      という人を募集中！
+    </p>
+  </div>
+  <div id='our-about'>
+    <p>"団体概要"</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>活動場所</th>
+          <td>不定</td>
+        </tr>
+        <tr>
+          <th>部費</th>
+          <td>なし</td>
+        </tr>
+        <tr>
+          <th>活動頻度</th>
+          <td>不定期<br /><span class='text-detail'>（月１回程度の定例会や毎週の勉強会）</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<style>
+  .pc-only {
+    display: inline;
+  }
+
+  .sp-only {
+    display: none;
+  }
+
+  #our-description {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px;
+    row-gap: 15px;
+  }
+
+  #our-description p {
+    text-align: center;
+  }
+
+  #our-about {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0px;
+    align-items: center;
+  }
+
+  #our-about > p {
+    width: fit-content;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  tr:not(:last-child) {
+    border-bottom: 1px solid var(--primary);
+  }
+
+  th {
+    width: 160px;
+    padding: 20px 0px;
+    font-size: var(--body);
+  }
+
+  td {
+    width: 360px;
+    padding: 20px 0px;
+    font-size: var(--body);
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .pc-only {
+      display: none;
+    }
+
+    .sp-only {
+      display: inline;
+    }
+
+    #our-description {
+      padding: 5vw 0px;
+      row-gap: 4vw;
+    }
+  }
+</style>

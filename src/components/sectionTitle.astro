@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div id='section-title'>
+  <p class='text-title'>{title}</p>
+</div>
+<style>
+  #section-title {
+    padding: 0px 15px;
+    width: fit-content;
+    border-bottom: 4px solid var(--primary);
+  }
+
+  #section-title p {
+    color: var(--primary);
+  }
+
+  @media screen and (max-width: 600px) {
+    #section-title {
+      border-bottom: 2px solid var(--primary);
+    }
+  }
+</style>

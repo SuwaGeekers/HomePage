@@ -9,7 +9,17 @@ strong {
 }
 
 section {
-  margin: 40px 60px;
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+section:not(#top):nth-child(2n) {
+  background-color: var(--bg-sub);
 }
 
 ul {
@@ -22,5 +32,11 @@ a {
 }
 
 p {
-  font-size: 20px;
+  font-size: var(--body);
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    padding: 10vw 4.5vw;
+  }
 }
